@@ -18,7 +18,7 @@ class CreateAdminService {
     })
 
     if (adminExists) {
-      throw new Error('That email already exists!')
+      throw new Error('This email is already registered!')
     }
 
     // Encrypt Password

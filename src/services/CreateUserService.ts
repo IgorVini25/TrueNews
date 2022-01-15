@@ -17,7 +17,7 @@ class CreateUserService {
     })
 
     if (userExists) {
-      throw new Error('This user already exists!')
+      throw new Error('This email is already registered!')
     }
 
     const cryptr = new Cryptr('f4b91f8e883e067d49b8cca92a5d5813')
