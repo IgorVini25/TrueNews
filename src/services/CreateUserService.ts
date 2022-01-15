@@ -12,7 +12,7 @@ class CreateUserService {
   async execute({ name, email, password }: iUserParams) {
     const usersRepository = getCustomRepository(UsersRepository)
 
-    const userExists = await usersRepository.find({
+    const userExists = await usersRepository.findOne({
       email
     })
 
