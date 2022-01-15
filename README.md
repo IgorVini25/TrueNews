@@ -9,10 +9,11 @@
 </div>
 
 <p align="center">
- <a href="#about">About</a> •
- <a href="#installation">Installation</a> • 
+ <a href="#features">Features</a> •
  <a href="#requiriments">Requiriments</a> • 
- <a href="#technologies">Technologies</a>
+ <a href="##installation-and-run-server">Installation and Run</a> • 
+ <a href="#technologies">Technologies</a> •
+ <a href="#memo-license">License</a>
 </p>
 
 <h4 align="center"> 
@@ -21,5 +22,96 @@
 
 ### Features
 
-- [x] Create User
-- [x] Create Admin
+- [x] Admin
+  - [x] Create Admin
+  - [x] Edit Admin
+  
+- [ ] User
+  - [x] Create User
+  - [ ] Edit User
+
+- [ ] Auth
+  - [x] Admin Auth
+  - [ ] User Auth
+
+- [ ] Posts
+  - [ ] Create Post
+  - [ ] Edit Post
+  - [ ] Create custom Route
+  - [ ] Like and Dislike
+
+- [ ] Comments
+  - [ ] Create Comment
+  - [ ] Create anonymous Comment
+  - [ ] Like and Dislike
+
+- [ ] Front-end
+  - [ ] Home Page
+  - [ ] Page to posts
+  - [ ] Admin Page
+  - [ ] User Page
+ 
+ ### Requiriments
+ 
+ Before Run this project, you need some requiriments.
+ - [Node.js](https://nodejs.org/en/)
+ - [Git](https://git-scm.com)
+
+### Installation and Run server
+
+First clone this repository
+```bash
+# First clone this repository
+$ git clone https://github.com/IgorVini25/TrueNews.git
+```
+
+```cmd
+# Enter in repository Folder
+$ cd TrueNews
+```
+
+```node
+# Install Dependencies
+$ yarn install
+
+# Create Database
+$ yarn create-db
+
+# Create Database Tables
+$ yarn typeorm migration:run
+
+# Run Server
+$ yarn dev
+
+# You Can Acess The Project At http://localhost:3333
+```
+
+### Technologies
+
+The techs used to development of this project are:
+
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Typeorm](https://typeorm.io/#/)
+- [Sqlite](https://www.sqlite.org/index.html)
+- [Cryptr](https://www.npmjs.com/package/cryptr)
+
+---
+
+<div align="center">
+ <h3>Author</h3>
+ <a href="https://github.com/IgorVini25">
+  <img style="border-radius: 50%;" src="https://github.com/IgorVini25.png" width="100px;" alt=""/>
+  <br />
+  <sub><b>Igor Vinicius</b></sub>
+ </a>
+</div>
+
+---
+
+### :memo: License
+
+This project License is MIT. See [LICENSE](LICENSE) File for more details.
+
+Made with ♥ by IgorVini25
