@@ -11,7 +11,7 @@
 <p align="center">
  <a href="#features">Features</a> •
  <a href="#requiriments">Requiriments</a> • 
- <a href="##installation-and-run-server">Installation and Run</a> • 
+ <a href="#installation-and-run-server">Installation and Run</a> • 
  <a href="#technologies">Technologies</a> •
  <a href="#memo-license">License</a>
 </p>
