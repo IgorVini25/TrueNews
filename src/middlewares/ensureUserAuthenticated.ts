@@ -20,10 +20,7 @@ export function ensureUserAuthenticated(
 
   // Verify if token is valid
   try {
-    const { sub } = verify(
-      token,
-      'f4b91f8e883e067d49b8cca92a5d5813'
-    ) as iPayLoad
+    const { sub } = verify(token, process.env.SECRET_KEY) as iPayLoad
 
     // Save user id
     request.user_id = sub

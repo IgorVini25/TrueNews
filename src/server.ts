@@ -3,6 +3,9 @@ import express from 'express'
 import 'express-async-errors'
 import { errors } from './middlewares/errors'
 
+import dotenv from 'dotenv'
+dotenv.config()
+
 import './database'
 import { router } from './routes'
 

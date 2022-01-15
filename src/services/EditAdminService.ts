@@ -25,14 +25,14 @@ class EditAdminService {
     const admin = await adminsRepository.findOne(user_id)
 
     if (!admin) {
-      throw new Error("This admin doesn't exists!")
+      throw new Error('Email or Password incorrect!')
     }
 
     // Verify if password is correct
-    const cryptr = new Cryptr('f4b91f8e883e067d49b8cca92a5d5813')
+    const cryptr = new Cryptr(process.env.SECRET_KEY)
     const decryptPassword = cryptr.decrypt(admin.password)
     if (password !== decryptPassword) {
-      throw new Error('Incorrect password!')
+      throw new Error('Email or Password incorrect!')
     }
 
     // Some Errors

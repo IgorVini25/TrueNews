@@ -20,7 +20,7 @@ class AuthenticateAdminService {
       throw new Error('Password or Email incorrect!')
     }
 
-    const cryptr = new Cryptr('f4b91f8e883e067d49b8cca92a5d5813')
+    const cryptr = new Cryptr(process.env.SECRET_KEY)
     const decryptedPassword = cryptr.decrypt(admin.password)
 
     if (password !== decryptedPassword) {
@@ -31,7 +31,7 @@ class AuthenticateAdminService {
       {
         email
       },
-      'f4b91f8e883e067d49b8cca92a5d5813',
+      process.env.SECRET_KEY,
       {
         subject: admin.id,
         expiresIn: '2d'

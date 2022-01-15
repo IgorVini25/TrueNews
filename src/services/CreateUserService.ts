@@ -20,7 +20,7 @@ class CreateUserService {
       throw new Error('This email is already registered!')
     }
 
-    const cryptr = new Cryptr('f4b91f8e883e067d49b8cca92a5d5813')
+    const cryptr = new Cryptr(process.env.SECRET_KEY)
     const passwordHash = cryptr.encrypt(password)
 
     const user = usersRepository.create({
