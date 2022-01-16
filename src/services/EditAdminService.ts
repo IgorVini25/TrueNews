@@ -28,7 +28,7 @@ class EditAdminService {
     const cryptr = new Cryptr(process.env.SECRET_KEY)
     const decryptPassword = cryptr.decrypt(admin.password)
     if (password !== decryptPassword) {
-      throw new Error('Email or Password incorrect!')
+      throw new Error('Password incorrect!')
     }
 
     // Some Errors
@@ -37,7 +37,7 @@ class EditAdminService {
       newEmail === admin.email &&
       newPassword === decryptPassword
     ) {
-      throw new Error('Name, Email, or Password incorrect!')
+      throw new Error("New Name, Email, and Password can't be same!")
     }
 
     if (
@@ -46,7 +46,7 @@ class EditAdminService {
         newPassword === undefined) ||
       (newName === '' && newEmail === '' && newPassword === '')
     ) {
-      throw new Error('Name, Email, or Password incorrect!')
+      throw new Error("New Name, Email, and Password can't be null!")
     }
 
     if (newName !== admin.name && newName !== undefined) {
