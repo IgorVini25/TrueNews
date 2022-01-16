@@ -30,7 +30,7 @@ class EditUserService {
       throw new Error('Password incorrect!')
     }
 
-    // Some Errors
+    // If all params be equals registered
     if (
       newName === user.name &&
       newEmail === user.email &&
@@ -39,6 +39,7 @@ class EditUserService {
       throw new Error("New Name, Email, and Password can't be same!")
     }
 
+    // If all params be null
     if (
       (newName === undefined &&
         newEmail === undefined &&
@@ -46,6 +47,14 @@ class EditUserService {
       (newName === '' && newEmail === '' && newPassword === '')
     ) {
       throw new Error("New Name, Email, and Password can't be null!")
+    }
+
+    // Verify if email exists
+    const emailExists = await usersRepository.findOne({
+      email: newEmail
+    })
+    if (emailExists) {
+      throw new Error('This email already exists!')
     }
 
     if (newName !== user.name && newName !== undefined) {
