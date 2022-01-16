@@ -5,7 +5,7 @@
 ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=blue)
 ![node ver](https://img.shields.io/static/v1?label=Node&message=14.18.1&color=blue)
 ![prs](https://img.shields.io/static/v1?label=PRs&message=welcome&color=green)
-  
+
 </div>
 
 <p align="center">
@@ -25,22 +25,25 @@
 - [x] Admin
   - [x] Create Admin
   - [x] Edit Admin
-  
 - [ ] User
+
   - [x] Create User
   - [ ] Edit User
 
 - [ ] Auth
+
   - [x] Admin Auth
-  - [ ] User Auth
+  - [x] User Auth
 
 - [ ] Posts
+
   - [ ] Create Post
   - [ ] Edit Post
   - [ ] Create custom Route
   - [ ] Like and Dislike
 
 - [ ] Comments
+
   - [ ] Create Comment
   - [ ] Create anonymous Comment
   - [ ] Like and Dislike
@@ -50,16 +53,18 @@
   - [ ] Page to posts
   - [ ] Admin Page
   - [ ] User Page
- 
- ### Requiriments
- 
- Before Run this project, you need some requiriments.
- - [Node.js](https://nodejs.org/en/)
- - [Git](https://git-scm.com)
+
+### Requiriments
+
+Before Run this project, you need some requiriments.
+
+- [Node.js](https://nodejs.org/en/)
+- [Git](https://git-scm.com)
 
 ### Installation and Run server
 
 First clone this repository
+
 ```bash
 # First clone this repository
 $ git clone https://github.com/IgorVini25/TrueNews.git
