@@ -10,7 +10,7 @@
 
 <p align="center">
  <a href="#features">Features</a> •
- <a href="#requiriments">Requiriments</a> • 
+ <a href="#requirements">Requirements</a> • 
  <a href="#installation-and-run-server">Installation and Run</a> • 
  <a href="#technologies">Technologies</a> •
  <a href="#memo-license">License</a>
@@ -23,14 +23,16 @@
 ### Features
 
 - [x] Admin
+
   - [x] Create Admin
   - [x] Edit Admin
-- [ ] User
+
+- [x] User
 
   - [x] Create User
-  - [ ] Edit User
+  - [x] Edit User
 
-- [ ] Auth
+- [x] Auth
 
   - [x] Admin Auth
   - [x] User Auth
@@ -54,9 +56,9 @@
   - [ ] Admin Page
   - [ ] User Page
 
-### Requiriments
+### Requirements
 
-Before Run this project, you need some requiriments.
+Before Run this project, you need some requirements.
 
 - [Node.js](https://nodejs.org/en/)
 - [Git](https://git-scm.com)
@@ -88,7 +90,7 @@ $ yarn typeorm migration:run
 # Run Server
 $ yarn dev
 
-# You Can Acess The Project At http://localhost:3333
+# You Can test The Project At http://localhost:3333
 ```
 
 ### Technologies
