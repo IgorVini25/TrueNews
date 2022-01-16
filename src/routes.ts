@@ -7,6 +7,7 @@ import { AuthenticateUserController } from './controllers/AuthenticateUserContro
 import { CreateAdminController } from './controllers/CreateAdminController'
 import { CreateUserController } from './controllers/CreateUserController'
 import { EditAdminController } from './controllers/EditAdminController'
+import { EditUserController } from './controllers/EditUserController'
 
 // Middlewares
 import { ensureAdminAuthenticated } from './middlewares/ensureAdminAuthenticated'
@@ -19,6 +20,7 @@ const authenticateAdminController = new AuthenticateAdminController()
 
 // Users Controllers
 const createUserController = new CreateUserController()
+const editUserController = new EditUserController()
 const authenticateUserController = new AuthenticateUserController()
 
 // Admin
@@ -27,6 +29,7 @@ router.post('/admin/edit', ensureAdminAuthenticated, editAdminController.handle)
 
 // User
 router.post('/user/create', createUserController.handle)
+router.post('/user/edit', ensureUserAuthenticated, editUserController.handle)
 
 // Auth
 router.post('/admin/auth', authenticateAdminController.handle)
