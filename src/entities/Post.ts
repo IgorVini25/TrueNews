@@ -4,12 +4,11 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
-  OneToMany,
-  OneToOne,
   PrimaryColumn,
   UpdateDateColumn
 } from 'typeorm'
 import { Admin } from './Admin'
+import { v4 as uuid } from 'uuid'
 
 @Entity('posts')
 class Post {
@@ -25,16 +24,9 @@ class Post {
   @Column()
   author: string
 
-  @JoinColumn({ name: 'post_author' })
-  @OneToOne(() => Admin)
+  @JoinColumn({ name: 'author' })
+  @ManyToOne(() => Admin)
   author_id: Admin
-
-  @Column()
-  comments: string
-
-  @JoinColumn({ name: 'post_comments' })
-  @ManyToOne(() => Comment)
-  comments_ids: Comment
 
   @Column()
   likes: Number
@@ -47,6 +39,17 @@ class Post {
 
   @UpdateDateColumn()
   updated_at: Date
+
+  constructor() {
+    if (!this.id) {
+      this.id = uuid()
+    }
+
+    if (!this.likes && !this.dislikes) {
+      this.likes = 0
+      this.dislikes = 0
+    }
+  }
 }
 
 export { Post }

@@ -41,6 +41,14 @@ export class CreateCommentsTable1642547803595 implements MigrationInterface {
         ],
         foreignKeys: [
           {
+            name: 'FKPostId',
+            referencedTableName: 'posts',
+            referencedColumnNames: ['id'],
+            columnNames: ['post_id'],
+            onDelete: 'SET NULL',
+            onUpdate: 'SET NULL'
+          },
+          {
             name: 'FKUserSenderComment',
             referencedTableName: 'users',
             referencedColumnNames: ['id'],

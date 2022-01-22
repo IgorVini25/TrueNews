@@ -24,10 +24,6 @@ export class CreatePostsTable1642727545161 implements MigrationInterface {
             type: 'uuid'
           },
           {
-            name: 'comments',
-            type: 'uuid'
-          },
-          {
             name: 'likes',
             type: 'int',
             default: 0
@@ -54,14 +50,6 @@ export class CreatePostsTable1642727545161 implements MigrationInterface {
             referencedTableName: 'admins',
             referencedColumnNames: ['id'],
             columnNames: ['author'],
-            onDelete: 'SET NULL',
-            onUpdate: 'SET NULL'
-          },
-          {
-            name: 'FKComment',
-            referencedTableName: 'comments',
-            referencedColumnNames: ['post_id'],
-            columnNames: ['comments'],
             onDelete: 'SET NULL',
             onUpdate: 'SET NULL'
           }
