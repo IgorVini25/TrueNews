@@ -39,7 +39,7 @@
 
 - [ ] Posts
 
-  - [ ] Create Post
+  - [x] Create Post
   - [ ] Edit Post
   - [ ] Create custom Route
   - [ ] Like and Dislike
