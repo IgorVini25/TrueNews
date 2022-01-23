@@ -5,6 +5,7 @@ const router = Router()
 import { AuthenticateAdminController } from './controllers/AuthenticateAdminController'
 import { AuthenticateUserController } from './controllers/AuthenticateUserController'
 import { CreateAdminController } from './controllers/CreateAdminController'
+import { CreateCommentController } from './controllers/CreateComentController'
 import { CreatePostController } from './controllers/CreatePostController'
 import { CreateUserController } from './controllers/CreateUserController'
 import { EditAdminController } from './controllers/EditAdminController'
@@ -27,6 +28,9 @@ const authenticateUserController = new AuthenticateUserController()
 // Post Controllers
 const createPostController = new CreatePostController()
 
+// Comments Controllers
+const createCommentController = new CreateCommentController()
+
 // Admin
 router.post('/admin/create', createAdminController.handle)
 router.post('/admin/edit', ensureAdminAuthenticated, editAdminController.handle)
@@ -41,5 +45,8 @@ router.post('/user/auth', authenticateUserController.handle)
 
 // Post
 router.post('/post/create', ensureAdminAuthenticated, createPostController.handle)
+
+// Comment
+router.post('/comment/create', ensureUserAuthenticated, createCommentController.handle)
 
 export { router }
