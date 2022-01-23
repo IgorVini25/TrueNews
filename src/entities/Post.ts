@@ -29,10 +29,10 @@ class Post {
   author_id: Admin
 
   @Column()
-  likes: Number
+  likes: number
 
   @Column()
-  dislikes: Number
+  dislikes: number
 
   @CreateDateColumn()
   created_at: Date
