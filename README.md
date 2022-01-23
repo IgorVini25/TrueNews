@@ -44,10 +44,10 @@
   - [ ] Create custom Route
   - [x] Like and Dislikes
 
-- [ ] Comments
+- [x] Comments
 
   - [x] Create Comment
-  - [ ] Like and Dislike
+  - [x] Like and Dislike
 
 - [ ] Front-end
   - [ ] Home Page
