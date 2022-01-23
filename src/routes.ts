@@ -10,6 +10,7 @@ import { CreatePostController } from './controllers/CreatePostController'
 import { CreateUserController } from './controllers/CreateUserController'
 import { EditAdminController } from './controllers/EditAdminController'
 import { EditUserController } from './controllers/EditUserController'
+import { LikeAndDislikePostController } from './controllers/LikeAndDislikePostController'
 
 // Middlewares
 import { ensureAdminAuthenticated } from './middlewares/ensureAdminAuthenticated'
@@ -27,6 +28,7 @@ const authenticateUserController = new AuthenticateUserController()
 
 // Post Controllers
 const createPostController = new CreatePostController()
+const likeAndDislikePostController = new LikeAndDislikePostController()
 
 // Comments Controllers
 const createCommentController = new CreateCommentController()
@@ -48,5 +50,11 @@ router.post('/post/create', ensureAdminAuthenticated, createPostController.handl
 
 // Comment
 router.post('/comment/create', ensureUserAuthenticated, createCommentController.handle)
+
+// Like and Dislike Post
+router.post('/post/like', likeAndDislikePostController.like)
+router.post('/post/dislike', likeAndDislikePostController.dislike)
+router.post('/post/like/remove', likeAndDislikePostController.removeLike)
+router.post('/post/dislike/remove', likeAndDislikePostController.removeDislike)
 
 export { router }
