@@ -47,6 +47,6 @@ router.post('/user/auth', authenticateUserController.handle)
 router.post('/post/create', ensureAdminAuthenticated, createPostController.handle)
 
 // Comment
-router.post('/comment/create', ensureUserAuthenticated, createCommentController.handle)
+router.post('/comment/create', createCommentController.handle)
 
 export { router }
