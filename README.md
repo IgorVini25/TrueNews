@@ -42,7 +42,7 @@
   - [x] Create Post
   - [ ] Edit Post
   - [ ] Create custom Route
-  - [ ] Like and Dislike
+  - [x] Like and Dislikes
 
 - [ ] Comments
 
