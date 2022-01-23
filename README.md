@@ -46,8 +46,7 @@
 
 - [ ] Comments
 
-  - [ ] Create Comment
-  - [ ] Create anonymous Comment
+  - [x] Create Comment
   - [ ] Like and Dislike
 
 - [ ] Front-end
