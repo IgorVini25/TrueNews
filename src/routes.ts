@@ -5,7 +5,7 @@ const router = Router()
 import { AuthenticateAdminController } from './controllers/AuthenticateAdminController'
 import { AuthenticateUserController } from './controllers/AuthenticateUserController'
 import { CreateAdminController } from './controllers/CreateAdminController'
-import { CreateCommentController } from './controllers/CreateComentController'
+import { CreateCommentController } from './controllers/CreateCommentController'
 import { CreatePostController } from './controllers/CreatePostController'
 import { CreateUserController } from './controllers/CreateUserController'
 import { EditAdminController } from './controllers/EditAdminController'
