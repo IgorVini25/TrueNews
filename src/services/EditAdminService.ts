@@ -31,43 +31,13 @@ class EditAdminService {
       throw new Error('Password incorrect!')
     }
 
-    // If all params be equals registered
-    if (
-      newName === admin.name &&
-      newEmail === admin.email &&
-      newPassword === decryptPassword
-    ) {
-      throw new Error("New Name, Email, and Password can't be same!")
-    }
-
-    // If all params be null
-    if (
-      (newName === undefined &&
-        newEmail === undefined &&
-        newPassword === undefined) ||
-      (newName === '' && newEmail === '' && newPassword === '')
-    ) {
-      throw new Error("New Name, Email, and Password can't be null!")
-    }
-
     // Verify if email exists
     const emailExists = await adminsRepository.findOne({
       email: newEmail
     })
+
     if (emailExists) {
       throw new Error('This email already exists!')
-    }
-
-    if (newName !== admin.name && newName !== undefined) {
-      admin.name = newName
-    }
-
-    if (newEmail !== admin.email && newEmail !== undefined) {
-      admin.email = newEmail
-    }
-
-    if (newPassword !== decryptPassword && newPassword !== undefined) {
-      admin.password = newPassword
     }
 
     await adminsRepository.save(admin)
