@@ -34,6 +34,8 @@ class Post {
   @Column()
   dislikes: number
 
+  comments: any[]
+
   @CreateDateColumn()
   created_at: Date
 
