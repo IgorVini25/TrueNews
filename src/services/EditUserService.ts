@@ -38,6 +38,18 @@ class EditUserService {
       throw new Error('This email already exists!')
     }
 
+    if (!newName) {
+      user.name = newName
+    }
+
+    if (!newEmail) {
+      user.email = newEmail
+    }
+
+    if (!newPassword) {
+      user.password = newPassword
+    }
+
     await usersRepository.save(user)
 
     return instanceToPlain(user)

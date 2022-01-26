@@ -40,6 +40,18 @@ class EditAdminService {
       throw new Error('This email already exists!')
     }
 
+    if (!newName) {
+      admin.name = newName
+    }
+
+    if (!newEmail) {
+      admin.email = newEmail
+    }
+
+    if (!newPassword) {
+      admin.password = newPassword
+    }
+
     await adminsRepository.save(admin)
 
     return instanceToPlain(admin)
