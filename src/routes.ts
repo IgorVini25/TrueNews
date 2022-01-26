@@ -9,6 +9,7 @@ import { CreateCommentController } from './controllers/CreateCommentController'
 import { CreatePostController } from './controllers/CreatePostController'
 import { CreateUserController } from './controllers/CreateUserController'
 import { EditAdminController } from './controllers/EditAdminController'
+import { EditPostController } from './controllers/EditPostController'
 import { EditUserController } from './controllers/EditUserController'
 import { LikeAndDislikeCommentController } from './controllers/LikeAndDislikeCommentController'
 import { LikeAndDislikePostController } from './controllers/LikeAndDislikePostController'
@@ -30,6 +31,7 @@ const authenticateUserController = new AuthenticateUserController()
 // Post Controllers
 const createPostController = new CreatePostController()
 const likeAndDislikePostController = new LikeAndDislikePostController()
+const editPostController = new EditPostController()
 
 // Comments Controllers
 const createCommentController = new CreateCommentController()
@@ -49,6 +51,7 @@ router.post('/user/auth', authenticateUserController.handle)
 
 // Post
 router.post('/post/create', ensureAdminAuthenticated, createPostController.handle)
+router.post('/post/edit', ensureAdminAuthenticated, editPostController.handle)
 
 // Comment
 router.post('/comment/create', ensureUserAuthenticated, createCommentController.handle)
