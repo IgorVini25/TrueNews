@@ -40,7 +40,7 @@
 - [ ] Posts
 
   - [x] Create Post
-  - [ ] Edit Post
+  - [x] Edit Post
   - [ ] Create custom Route
   - [x] Like and Dislikes
 
@@ -89,7 +89,7 @@ $ yarn typeorm migration:run
 # Run Server
 $ yarn dev
 
-# You Can test The Project At http://localhost:3333
+# You Can Test The Project At http://localhost:3333
 ```
 
 ### Technologies
