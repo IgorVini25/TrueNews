@@ -17,7 +17,7 @@
 </p>
 
 <h4 align="center"> 
-	🚧 In Development...  🚧
+	🚧 Stopped  🚧
 </h4>
 
 ### Features
@@ -48,6 +48,8 @@
 
   - [x] Create Comment
   - [x] Like and Dislike
+
+In future.
 
 - [ ] Front-end
   - [ ] Home Page
